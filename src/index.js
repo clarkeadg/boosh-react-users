@@ -18,7 +18,7 @@ const RatePhotoReducer   = require('./Reducers/RatePhotoReducer');
 const UsersRoutes        = require('./routes');
 
 module.exports = {
-  User:                  User.default,
+  User:                  User,
   GetUser:               GetUser.default,
   GetUsersCollection:    GetUsersCollection.default,
   UsersCollection:       UsersCollection.default,
