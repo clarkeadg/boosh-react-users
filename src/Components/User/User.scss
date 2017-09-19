@@ -1,0 +1,81 @@
+
+.User {
+  margin-bottom: 0.5em;
+  display: inline-block;
+
+  .onlineStatus {
+    &.online {
+      color: rgb(0,128,0);
+      font-size: 0.85em;
+    }
+  }
+}
+
+.UserName {
+  padding: 0 0.25em;
+}
+
+.UserPhoto {
+  display: inline-block;
+}
+
+.UserPhoto img {
+  border: 1px solid #000;
+}
+
+.UserPhotoSmall {
+  width: 32px;
+  height: 32px;
+}
+
+.UserPhotoMedium {
+  width: 50px;
+  height: 50px;
+  border-radius: 0.5em;
+}
+
+.UserPhotoLarge {
+  width: 200px;
+  //height: 200px;
+}
+
+.user-list-meta {
+  padding: 0 1em;
+  color: #000;
+  font-weight: 600;
+}
+
+.users-list {
+  .User {
+    display: block;
+    border: 0.1em solid #eee;
+    border-radius: 0.25em;
+    padding: 1em;
+    .UserPhoto {
+      width: 95%;
+    }
+    .UserName {
+      padding: 0;
+    }
+  }
+  .User-photo {}
+  .User-meta {
+    text-align: left;
+    padding: 0 1.5em;
+    font-size: 0.85em;
+  }  
+  .User-meta-top {
+    font-weight: 600;
+  }
+  .User-meta-mid {
+    padding: 1em 0;
+  }
+  .User-meta-bot {}
+  .User-meta-headline {    
+    color: #003470;
+    font-size: 1.1em;
+  }
+  .User-meta-location {
+    padding: 0 0.5em;
+  }
+}
