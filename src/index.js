@@ -4,7 +4,6 @@ const GetUser            = require('./Components/User/GetUser');
 const GetUsersCollection = require('./Collections/GetUsersCollection');
 const UsersCollection    = require('./Collections/UsersCollection');
 const UserMetaCollection = require('./Collections/UserMetaCollection');
-const UserSelector       = require('./Selectors/UserSelector');
 const UserMetaSelector   = require('./Selectors/UserMetaSelector');
 const UsersActions       = require('./Actions/Creators');
 const UsersSaga          = require('./Sagas/UsersSaga');
@@ -18,12 +17,11 @@ const RatePhotoReducer   = require('./Reducers/RatePhotoReducer');
 const UsersRoutes        = require('./routes');
 
 module.exports = {
-  User:                  User,
+  User:                  User.default,
   GetUser:               GetUser.default,
   GetUsersCollection:    GetUsersCollection.default,
   UsersCollection:       UsersCollection.default,
   UserMetaCollection:    UserMetaCollection.default,
-  UserSelector:          UserSelector,
   getUsersCollection:    UserSelector.getUsersCollection,
   getUserByUsername:     UserSelector.getUserByUsername,
   getUserById:           UserSelector.getUserById,
@@ -37,5 +35,5 @@ module.exports = {
   UserMetaReducer:       UserMetaReducer.default,
   MeetMeReducer:         MeetMeReducer.default,
   RatePhotoReducer:      RatePhotoReducer.default,
-  UsersRoutes:           UsersRoutes
+  UsersRoutes:           UsersRoutes.default
 }
