@@ -94,8 +94,20 @@ class User extends React.Component {
       resize+= "h["+userOptions.height+"]e[true]"
     }
 
-    let photoServer = userOptions.photoServer || 'http://local.uploads.boosh.io/';
-    let defaultPhoto = userOptions.defaultPhoto || 'defaultAvatar.jpg';
+    let photoServer1 = 'http://local.uploads.boosh.io';
+    let defaultPhoto1 = '/defaultAvatar.jpg';
+
+    if (typeof window != "undefined" &&window.Config ) {
+      if (window.Config.uploadsBaseUrl) {
+        photoServer1 = window.Config.uploadsBaseUrl
+      }
+      if (window.Config.uploadsBaseUrl) {
+        defaultPhoto1 = window.Config.defaultPhoto
+      }
+    }
+
+    let photoServer = userOptions.photoServer || photoServer1;
+    let defaultPhoto = userOptions.defaultPhoto || defaultPhoto1;
 
     let photo = photoServer + (user.photo || defaultPhoto) + resize;
 
