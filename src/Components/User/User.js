@@ -101,7 +101,7 @@ class User extends React.Component {
       if (window.Config.uploadsBaseUrl) {
         photoServer1 = window.Config.uploadsBaseUrl
       }
-      if (window.Config.uploadsBaseUrl) {
+      if (window.Config.defaultPhoto) {
         defaultPhoto1 = window.Config.defaultPhoto
       }
     }
